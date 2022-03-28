@@ -29,7 +29,7 @@ app.get("/api/cats", (req, res)=>{
 })
 
 app.post("/api/cats", (req, res)=>{
-    const {body} = body
+    const {body} = req
     catList.push(body)
     return res.sendStatus(200)
 })
