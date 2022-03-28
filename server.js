@@ -3,7 +3,7 @@ const app = express()
 
 const path = require("path")
 
-app.use(express.static(path.join(__dirname,"client")))
+app.use(express.json())
 
 const catList = [
     {
@@ -23,6 +23,18 @@ const catList = [
     }
 
 ]
+
+app.get("/api/cats", (req, res)=>{
+    return res.json(catList)
+})
+
+app.post("/api/cats", (req, res)=>{
+    const {body} = body
+    catList.push(body)
+    return res.sendStatus(200)
+})
+
+app.use(express.static(path.join(__dirname,"client")))
 
 app.listen(3000,()=>{
     console.log("Server running on port 3000")
