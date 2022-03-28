@@ -5,7 +5,7 @@ tittle.innerHTML = "Daftar Hadir Kucing"
 const container = document.getElementById('container')
 //container.innerHTML = "Test"
 
-
+/*
 function createCatTemplate(name, breed, img){
     return `<div class="card">
                 <div class="img-container">
@@ -30,6 +30,7 @@ async function requestCats(){
 
 requestCats()
 
+*/
 
 async function parseInput(){
     const boxName = document.getElementById("name")
@@ -53,6 +54,6 @@ async function parseInput(){
         body : JSON.stringify(payload)
     })
 
-    container.innerHTML += createCatTemplate(nameValue, breedValue, imgValue)
+    //container.innerHTML += createCatTemplate(nameValue, breedValue, imgValue)
 
 }
