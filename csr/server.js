@@ -34,6 +34,7 @@ app.post("/api/cats", (req, res)=>{
     return res.sendStatus(200)
 })
 
+
 app.use(express.static(path.join(__dirname,"client")))
 
 app.listen(3000,()=>{
